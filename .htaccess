@@ -1,4 +1,4 @@
-# CTRL | CMD Replace all "/PATH_FROM_ROOT_TO" occurences with your path from root to the folder you want to customise
+# CTRL | CMD Replace all "/PATH_FROM_ROOT_TO" occurences with your path from root to the folder you want to customize
 
 # Generic icons : blank, directory, parent and default
 
@@ -37,19 +37,17 @@ AddIcon /PATH_FROM_ROOT_TO/.victorio/i/video.png .asf .asx .avi .flv .mkv .mov .
 AddIcon /PATH_FROM_ROOT_TO/.victorio/i/zip.png .zip .rar
 
 
-# files and folders to ignore :
+# Files and folders to ignore :
 # add to the line the folder or file you want to hide with the complete path from root
 IndexIgnore .htaccess /PATH_FROM_ROOT_TO/.victorio 
 
 
 # Structure of the page with the header, footer, default css and possibility to add custom insert in header :
-# eg : IndexHeadInsert "<link rel=\"sitemap\" href=\"/sitemap.html\">" 
-
 HeaderName /PATH_FROM_ROOT_TO/.victorio/header.html
 IndexStyleSheet "/PATH_FROM_ROOT_TO/.victorio/style.css" 
 ReadmeName /PATH_FROM_ROOT_TO/.victorio/footer.html
 
-IndexHeadInsert "<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js\" ></script> 
+IndexHeadInsert "<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js\" ></script><script src=\"/PATH_FROM_ROOT_TO/.victorio/main.js\"></script>" 
 
 
 # Config (learn more : http://apache.org/docs/2.2/mod/mod_autoindex.html)
