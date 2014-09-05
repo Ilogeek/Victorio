@@ -1,0 +1,202 @@
+* {
+	margin:0; 
+	padding:0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+}
+
+html {
+	min-height:100%;
+	border-bottom:5px solid #e74c3c;
+	color:#61666c;
+	font-weight:400;
+	font-size:1em;
+	font-family: sans-serif;
+	line-height:2em;
+	padding: 0;
+	margin: 0;
+}
+
+head {
+	display: block;
+}
+
+title {
+	display: block;
+	padding: 20px;
+	color: white;
+	font-size: 2em;
+	background: #e74c3c;
+	font-weight: lighter;
+}
+
+textarea, input { outline: none; }
+
+#searchbar {
+	position: absolute;
+	right: 0px;
+	top:0px;
+	background: #e74c3c;
+	padding: 15px 20px;
+	color: white;
+}
+
+#searchbar input {
+	border:0;
+	background: #e74c3c;
+	color: white;
+	padding: 10px;
+}
+
+#searchbar fieldset {
+	border: 1px solid white;
+	position: relative;
+	z-index: 10;
+	background: #e74c3c;
+}
+
+#searchbar #validate {
+	border-left: 1px solid white;
+	text-align: center;
+	padding-left: 12px;
+	-webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+#searchbar #validate:hover {
+	background: white;
+	color: #e74c3c;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
+.cancel {
+	color: #e74c3c;
+}
+
+body {
+	padding:0px;
+	-webkit-backface-visibility:hidden;
+}
+
+a {
+	color:#61666c;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#2a2a2a;
+}
+
+.wrapper {
+	margin:0 auto;
+	padding: 20px;
+}
+
+
+table {
+	width:100%;
+	border-collapse:collapse;
+	font-size:.875em;
+}
+
+tr {
+	outline:0;
+	border:0;
+}
+
+tr:nth-child(even) {
+    background:#f6f6f6;
+}
+
+
+th {
+	text-align:left;
+	font-size:.75em;
+	padding-right:20px;
+}
+
+/* 2nd Column: Filename */
+th + th {
+	width:65%;
+}
+
+/* 4th Column: Size */
+th + th + th + th {
+	width:80px;
+	display: inline-block;
+}
+
+tr td:first-of-type {
+	padding-left:10px;
+	padding-right:10px;
+}
+
+td {
+	padding:8px 0;
+	outline:0;
+	border:0;
+	vertical-align:middle;
+	text-align:left;
+}
+
+td a {
+	display: block;
+}
+
+tr a:hover {
+	color:#2281d0;
+}
+
+footer {
+text-align:center;
+font-size:.75em;
+}
+
+@media all and (max-width: 550px) {
+	th + th + th + th, td + td + td + td, th + th + th, td + td + td {
+		width:0px;
+		overflow: hidden;
+		display: none;
+	}
+
+	th + th {
+		width: 90%;
+	}
+
+	title {
+		color: #e74c3c;
+		position: fixed;
+		z-index: 2;
+		width: 100%;
+		display: block;
+		text-indent:-5000px
+	}
+
+	body {
+		padding-top: 80px;
+	}
+
+	#searchbar {
+		left:0;
+		right:auto;
+		position: fixed;
+		z-index: 5;
+	}
+}

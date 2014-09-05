@@ -1,0 +1,59 @@
+# CTRL | CMD Replace all "/PATH_FROM_ROOT_TO" occurences with your path from root to the folder you want to customise
+
+# Generic icons : blank, directory, parent and default
+
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/blank.png ^^BLANKICON^^
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/folder.png ^^DIRECTORY^^
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/folders_explorer.png ..
+DefaultIcon /PATH_FROM_ROOT_TO/.victorio/i/page.png
+
+
+# Each extension can has its own icon :
+# eg. : AddIcon /PATH_FROM_ROOT_TO/.victorio/MY_IMAGE.png EXTENSION(S) THAT APPLIES TO THIS ICON
+
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/audio.png .aif .iff .m3u .m4a .mid .mp3 .mpa .ra .wav .wma .f4a .f4b .oga .ogg
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/bin.png .bin
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/bin.png .c
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/c.png .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/css.png .css
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/doc.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/eps.png .ai .eps  .svg
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/gif.png .gif
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/html.png .html .xhtml .shtml .htm
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/java.png .jar
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/jpg.png .jpg .jpeg
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/js.png .js .json
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/package.png .pkg .dmg
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/pdf.png .pdf
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/php.png .php .phtml
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/png.png .png
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/ps.png .ps
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/psd.png .psd
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/rb.png .rb
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/rss.png .rss
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/sql.png .sql
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/txt.png .txt .nfo
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/video.png .asf .asx .avi .flv .mkv .mov .mp4 .mpg .rm .srt .swf .vob .wmv .m4v .f4v .f4p .ogv
+AddIcon /PATH_FROM_ROOT_TO/.victorio/i/zip.png .zip .rar
+
+
+# files and folders to ignore :
+# add to the line the folder or file you want to hide with the complete path from root
+IndexIgnore .htaccess /PATH_FROM_ROOT_TO/.victorio 
+
+
+# Structure of the page with the header, footer, default css and possibility to add custom insert in header :
+# eg : IndexHeadInsert "<link rel=\"sitemap\" href=\"/sitemap.html\">" 
+
+HeaderName /PATH_FROM_ROOT_TO/.victorio/header.html
+IndexStyleSheet "/PATH_FROM_ROOT_TO/.victorio/style.css" 
+ReadmeName /PATH_FROM_ROOT_TO/.victorio/footer.html
+
+IndexHeadInsert "<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js\" ></script> 
+
+
+# Config (learn more : http://apache.org/docs/2.2/mod/mod_autoindex.html)
+
+Options +Indexes
+
+IndexOptions +FancyIndexing +IconsAreLinks +IgnoreCase +FoldersFirst +XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +VersionSort
